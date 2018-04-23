@@ -1,0 +1,340 @@
+1515339528136	geckodriver	INFO	geckodriver 0.19.1
+1515339528146	geckodriver	INFO	Listening on 127.0.0.1:56890
+1515339531366	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Craco\\AppData\\Local\\Temp\\rust_mozprofile.oo1vKjswSHce"
+1515339531895	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 3424, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 6216, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6216, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1515339533610	Marionette	INFO	Listening on port 56899
+1515339534489	Marionette	WARN	TLS certificate errors will be ignored for this session
+1515339534652	Marionette	DEBUG	Register listener.js for window 4294967297
+1515339534670	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1515339535752	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1515339535754	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1515339536722	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.zhihu.com/signin?next=%2F"
+1515339536925	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.zhihu.com/signin?next=%2F"
+[Parent 3424, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 3424, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 13480, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ld 12444, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1515339776531	Marionette	INFO	Listening on port 57150
+1515339777362	Marionette	WARN	TLS certificate errors will be ignored for this session
+1515339777439	Marionette	DEBUG	Register listener.js for window 4294967297
+1515339777463	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1515339778172	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1515339778173	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1515339778955	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://detail.tmall.com/item.htm?id=550503956502&skuId=3356664829040&areaId=110114&city=110100&posx=116.348253&posy=40.080133&user_id=2989395984&cat_id=2&is_b=1&rn=bf1388a038cff6d27bec0f1a87b17e37&ali_trackid=30_aa6dfb582fcb27a57f4b6848fb4bf550&spm=a21bo.2017.201862-2.1"
+1515339780271	Marionette	DEBUG	Received DOM event "pageshow" for "https://detail.tmall.com/item.htm?id=550503956502&skuId=3356664829040&areaId=110114&city=110100&posx=116.348253&posy=40.080133&user_id=2989395984&cat_id=2&is_b=1&rn=bf1388a038cff6d27bec0f1a87b17e37&ali_trackid=30_aa6dfb582fcb27a57f4b6848fb4bf550&spm=a21bo.2017.201862-2.1"
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: https://cookiemapping.wrating.com/link.html, line 3: NS_ERROR_FAILURE: 
+JavaScript warning: https://g.alicdn.com/kissy/k/1.4.2/??xtemplate-min.js,xtemplate/compiler-min.js?t=1_2013072520131122.js, line 24: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://g.alicdn.com/kissy/k/1.4.2/??xtemplate-min.js,xtemplate/compiler-min.js?t=1_2013072520131122.js, line 9: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://g.alicdn.com/kissy/k/1.4.2/??xtemplate-min.js,xtemplate/compiler-min.js?t=1_2013072520131122.js, line 218: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://g.alicdn.com/kissy/k/1.4.2/??xtemplate-min.js,xtemplate/compiler-min.js?t=1_2013072520131122.js, line 148: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://g.alicdn.com/kissy/k/1.4.2/??xtemplate-min.js,xtemplate/compiler-min.js?t=1_2013072520131122.js, line 38: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://g.alicdn.com/kissy/k/1.4.2/??xtemplate-min.js,xtemplate/compiler-min.js?t=1_2013072520131122.js, line 100: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://g.alicdn.com/kissy/k/1.4.2/??xtemplate-min.js,xtemplate/compiler-min.js?t=1_2013072520131122.js, line 21: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PImageBridge::Msg_Update Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PImageBridge::Msg_Update Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 4052, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PImageBridge::Msg_Update Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PImageBridge::Msg_Update Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x4B0027,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 11944, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+1515340028574	geckodriver	INFO	geckodriver 0.19.1
+1515340028584	geckodriver	INFO	Listening on 127.0.0.1:57377
+1515340031838	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Craco\\AppData\\Local\\Temp\\rust_mozprofile.ai5536hWiw62"
+1515340032459	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 9036, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 1944, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1944, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1515340034256	Marionette	INFO	Listening on port 57386
+1515340034976	Marionette	WARN	TLS certificate errors will be ignored for this session
+1515340035096	Marionette	DEBUG	Register listener.js for window 4294967297
+1515340035115	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1515340035761	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1515340035761	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1515340036440	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://detail.tmall.com/item.htm?id=550503956502&skuId=3356664829040&areaId=110114&city=110100&posx=116.348253&posy=40.080133&user_id=2989395984&cat_id=2&is_b=1&rn=bf1388a038cff6d27bec0f1a87b17e37&ali_trackid=30_aa6dfb582fcb27a57f4b6848fb4bf550&spm=a21bo.2017.201862-2.1"
+1515340037857	Marionette	DEBUG	Received DOM event "pageshow" for "https://detail.tmall.com/item.htm?id=550503956502&skuId=3356664829040&areaId=110114&city=110100&posx=116.348253&posy=40.080133&user_id=2989395984&cat_id=2&is_b=1&rn=bf1388a038cff6d27bec0f1a87b17e37&ali_trackid=30_aa6dfb582fcb27a57f4b6848fb4bf550&spm=a21bo.2017.201862-2.1"
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: https://cookiemapping.wrating.com/link.html, line 3: NS_ERROR_FAILURE: 
+[Child 6920, Chrome_ChildThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+1515340796898	geckodriver	INFO	geckodriver 0.19.1
+1515340796908	geckodriver	INFO	Listening on 127.0.0.1:57824
+1515340799975	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Craco\\AppData\\Local\\Temp\\rust_mozprofile.piEUFt8FVbFf"
+1515340800563	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 12264, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12264, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1515340802289	Marionette	INFO	Listening on port 57835
+1515340803099	Marionette	WARN	TLS certificate errors will be ignored for this session
+1515340803179	Marionette	DEBUG	Register listener.js for window 4294967297
+1515340803197	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1515340804325	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1515340804326	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1515340805315	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://detail.tmall.com/item.htm?id=550503956502&skuId=3356664829040&areaId=110114&city=110100&posx=116.348253&posy=40.080133&user_id=2989395984&cat_id=2&is_b=1&rn=bf1388a038cff6d27bec0f1a87b17e37&ali_trackid=30_aa6dfb582fcb27a57f4b6848fb4bf550&spm=a21bo.2017.201862-2.1"
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: https://cookiemapping.wrating.com/link.html, line 3: NS_ERROR_FAILURE: 
+1515340806928	Marionette	DEBUG	Received DOM event "pageshow" for "https://detail.tmall.com/item.htm?id=550503956502&skuId=3356664829040&areaId=110114&city=110100&posx=116.348253&posy=40.080133&user_id=2989395984&cat_id=2&is_b=1&rn=bf1388a038cff6d27bec0f1a87b17e37&ali_trackid=30_aa6dfb582fcb27a57f4b6848fb4bf550&spm=a21bo.2017.201862-2.1"
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 2116, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1515340833797	geckodriver	INFO	geckodriver 0.19.1
+1515340833809	geckodriver	INFO	Listening on 127.0.0.1:57925
+1515340836929	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Craco\\AppData\\Local\\Temp\\rust_mozprofile.uRAQ2ltHbwpi"
+1515340837551	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 8252, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 6168, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6168, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1515340839265	Marionette	INFO	Listening on port 57935
+1515340840055	Marionette	WARN	TLS certificate errors will be ignored for this session
+1515340840181	Marionette	DEBUG	Register listener.js for window 4294967297
+1515340840200	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1515340840861	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1515340840862	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1515340841490	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://detail.tmall.com/item.htm?id=550503956502&skuId=3356664829040&areaId=110114&city=110100&posx=116.348253&posy=40.080133&user_id=2989395984&cat_id=2&is_b=1&rn=bf1388a038cff6d27bec0f1a87b17e37&ali_trackid=30_aa6dfb582fcb27a57f4b6848fb4bf550&spm=a21bo.2017.201862-2.1"
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: https://cookiemapping.wrating.com/link.html, line 3: NS_ERROR_FAILURE: 
+1515340842770	Marionette	DEBUG	Received DOM event "pageshow" for "https://detail.tmall.com/item.htm?id=550503956502&skuId=3356664829040&areaId=110114&city=110100&posx=116.348253&posy=40.080133&user_id=2989395984&cat_id=2&is_b=1&rn=bf1388a038cff6d27bec0f1a87b17e37&ali_trackid=30_aa6dfb582fcb27a57f4b6848fb4bf550&spm=a21bo.2017.201862-2.1"
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 4644, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4644, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1515342466022	geckodriver	INFO	geckodriver 0.19.1
+1515342466031	geckodriver	INFO	Listening on 127.0.0.1:58814
+1515342469106	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Craco\\AppData\\Local\\Temp\\rust_mozprofile.CJXSPugkmM8l"
+1515342469653	Marionette	INFO	Enabled via --marionette
+1515342471366	Marionette	INFO	Listening on port 58822
+1515342472233	Marionette	WARN	TLS certificate errors will be ignored for this session
+1515342472332	Marionette	DEBUG	Register listener.js for window 4294967297
+1515342472352	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1515342473368	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1515342473369	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1515342474224	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.zhihu.com/signin?next=%2F"
+1515342474430	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.zhihu.com/signin?next=%2F"
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 13704, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1515427472776	geckodriver	INFO	geckodriver 0.19.1
+1515427472785	geckodriver	INFO	Listening on 127.0.0.1:60222
+1515427476060	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Craco\\AppData\\Local\\Temp\\rust_mozprofile.TH9pLu0vQCh6"
+1515427476829	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 9208, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9208, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1515427478568	Marionette	INFO	Listening on port 60232
+1515427479270	Marionette	WARN	TLS certificate errors will be ignored for this session
+1515427479338	Marionette	DEBUG	Register listener.js for window 4294967297
+1515427479357	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1515427480245	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1515427480245	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1515427481126	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.zhihu.com/signin?next=%2F"
+1515427481369	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.zhihu.com/signin?next=%2F"
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 15204, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 15204, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ 1128, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1128, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1515427569576	Marionette	INFO	Listening on port 60404
+1515427570030	Marionette	WARN	TLS certificate errors will be ignored for this session
+1515427570134	Marionette	DEBUG	Register listener.js for window 4294967297
+1515427570158	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1515427570980	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1515427570981	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1515427571866	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.zhihu.com/signin?next=%2F"
+1515427572048	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.zhihu.com/signin?next=%2F"
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 14908, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 9184, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[GPU 12944, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+or window 4294967297
+1515427617408	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1515427618244	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1515427618245	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1515427619095	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.zhihu.com/signin?next=%2F"
+1515427619316	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.zhihu.com/signin?next=%2F"
+console.error: 
+  Message: Error: Source map at https://static.zhihu.com/heifetz/main.app.624a85ca4c3ccef60429.css.map not found or invalid
+  Stack:
+    _fetchSourceMap/map<@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/stylesheets.js:578:25
+process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:922:23
+walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:806:7
+scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:742:11
+
+_fetchSourceMap/map<@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/stylesheets.js:578:25
+process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:922:23
+walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:806:7
+scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:742:11
+console.error: 
+  Protocol error (unknownError): Source map at https://static.zhihu.com/heifetz/main.app.624a85ca4c3ccef60429.css.map not found or invalid
+console.error: 
+  Got a removal of an actor we didn't know about: server1.conn0.child1/domnode104
+console.error: 
+  Got an addition of an actor we didn't know about: server1.conn0.child1/domnode138
+console.error: 
+  Message: Error: Source map at https://static.zhihu.com/heifetz/main.app.624a85ca4c3ccef60429.css.map not found or invalid
+  Stack:
+    _fetchSourceMap/map<@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/stylesheets.js:578:25
+process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:922:23
+walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:806:7
+scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:742:11
+
+_fetchSourceMap/map<@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/stylesheets.js:578:25
+process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:922:23
+walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:806:7
+scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:742:11
+console.error: 
+  Protocol error (unknownError): Source map at https://static.zhihu.com/heifetz/main.app.624a85ca4c3ccef60429.css.map not found or invalid
+console.error: 
+  Message: Error: Source map at https://static.zhihu.com/heifetz/main.app.624a85ca4c3ccef60429.css.map not found or invalid
+  Stack:
+    _fetchSourceMap/map<@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/stylesheets.js:578:25
+process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:922:23
+walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:806:7
+scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:742:11
+
+_fetchSourceMap/map<@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/stylesheets.js:578:25
+process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:922:23
+walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:806:7
+scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:742:11
+console.error: 
+  Protocol error (unknownError): Source map at https://static.zhihu.com/heifetz/main.app.624a85ca4c3ccef60429.css.map not found or invalid
+console.error: 
+  Message: Error: Source map at https://static.zhihu.com/heifetz/main.app.624a85ca4c3ccef60429.css.map not found or invalid
+  Stack:
+    _fetchSourceMap/map<@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/stylesheets.js:578:25
+process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:922:23
+walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:806:7
+scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:742:11
+
+_fetchSourceMap/map<@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/stylesheets.js:578:25
+process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:922:23
+walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:806:7
+scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:742:11
+console.error: 
+  Protocol error (unknownError): Source map at https://static.zhihu.com/heifetz/main.app.624a85ca4c3ccef60429.css.map not found or invalid
+[Parent 15752, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 13704, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 11456, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+[Parent 15752, Gecko_IOThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1515428144055	geckodriver	INFO	geckodriver 0.19.1
+1515428144066	geckodriver	INFO	Listening on 127.0.0.1:60992
+1515428147326	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Craco\\AppData\\Local\\Temp\\rust_mozprofile.SVz9uuZaFX4f"
+1515428147895	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 11292, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11292, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1515428149542	Marionette	INFO	Listening on port 61002
+1515428150455	Marionette	WARN	TLS certificate errors will be ignored for this session
+1515428150577	Marionette	DEBUG	Register listener.js for window 4294967297
+1515428150596	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1515428151441	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1515428151442	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1515428152425	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.zhihu.com/signin?next=%2F"
+1515428152611	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.zhihu.com/signin?next=%2F"
+1515428153200	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 14840, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 14840, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 1804, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1515773072280	geckodriver	INFO	geckodriver 0.19.1
+1515773072293	geckodriver	INFO	Listening on 127.0.0.1:57888
+1515773075441	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Craco\\AppData\\Local\\Temp\\rust_mozprofile.pnOfHtrqtomE"
+1515773075991	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 13452, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13452, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1515773077723	Marionette	INFO	Listening on port 57896
+1515773078559	Marionette	WARN	TLS certificate errors will be ignored for this session
+1515773078702	Marionette	DEBUG	Register listener.js for window 4294967297
+1515773078725	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1515773079750	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1515773079753	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1515773080602	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.zhihu.com/signin?next=%2F"
+1515773080776	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.zhihu.com/signin?next=%2F"
+1515773096613	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 8576, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Craco\AppData\Local\openvr\openvrpaths.vrpath
+[Child 12756, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12756, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
