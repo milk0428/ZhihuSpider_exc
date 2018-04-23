@@ -61,6 +61,7 @@ class ZhihuSpider(scrapy.Spider):
 
         #知乎账号密码
         #测试版本
+        #测试同步功能
         browser.find_element_by_css_selector(".SignFlow-accountInput input").send_keys("XXXXXX")
         browser.find_element_by_css_selector(".SignFlow-password input").send_keys("XXXXX")
         browser.find_element_by_css_selector(".SignFlow .SignFlow-submitButton").click()
