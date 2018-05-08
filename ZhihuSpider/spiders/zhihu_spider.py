@@ -46,7 +46,7 @@ class ZhihuSpider(scrapy.Spider):
             if mathc_obj:
                 request_url=mathc_obj.group(1)
                 question_id=mathc_obj.group(2)
-                yield scrapy.Request(request_url,headers=self.header,callback=self.parse_qusetion)
+                yield scrapy.Request(request_url,headers=self.header,callback=self.parse_question)
 
     #处理question页面，从页面中提取具体的question item
     def parse_question(self, response):
@@ -62,8 +62,11 @@ class ZhihuSpider(scrapy.Spider):
         #知乎账号密码
         #测试版本
         #测试同步功能
-        browser.find_element_by_css_selector(".SignFlow-accountInput input").send_keys("XXXXXX")
-        browser.find_element_by_css_selector(".SignFlow-password input").send_keys("XXXXX")
+        browser.find_element_by_css_selector(".SignFlow-accountInput input").send_keys("13889931091")
+        browser.find_element_by_css_selector(".SignFlow-password input").send_keys("102733Cch")
+
+        time.sleep(10)
+
         browser.find_element_by_css_selector(".SignFlow .SignFlow-submitButton").click()
         #等待5秒以使得页面读取完毕
         time.sleep(5)
