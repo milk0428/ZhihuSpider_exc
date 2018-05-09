@@ -50,7 +50,47 @@ class ZhihuSpider(scrapy.Spider):
 
     #处理question页面，从页面中提取具体的question item
     def parse_question(self, response):
-        item_loader=ItemLoader(item=ZhihuQuestionItem(),response=response)
+        #知乎之前有新旧版本之分，有“QusetionHeader-title”的为新版本，无的为旧版本，故以此为判断依据
+        if "QuestionHeader-title" in response.text:
+            #注意使用itemloader方法先要import此类以及相关的item类
+            mathc_obj = re.match ( "(.*zhihu.com/question/(\d+))(/|$).*" , response.url )
+            if mathc_obj:
+                question_id =int(mathc_obj.group(2))
+
+            item_loader = ItemLoader(item=ZhihuQuestionItem(), response=response)
+            item_loader.add_css("title",".QuestionHeader-title::text")
+            item_loader.add_css("content",".QuestionHeader-detail")
+            item_loader.add_value("url",response.url)
+            item_loader.add_value("zhihu_id",question_id)
+            item_loader.add_css("answer_num",".QuestionMainAction::text")#有其他数据，待调整----------
+            item_loader.add_css("comments_num",".QuestionHeader-Comment button::text")#有其他数据，待调整
+            item_loader.add_css("watch_user_num",".QuestionFollowStatus-counts .NumberBoard-itemValue::attr(title)")#包含了关注者及被浏览
+            item_loader.add_css("click_num",".QuestionFollowStatus-counts .NumberBoard-itemValue::attr(title)")#包含了关注者及被浏览
+            item_loader.add_css("topics",".QuestionHeader-topics .Popover::text")#待完善---------------
+
+            question_item=item_loader.load_item()
+            # # zhihu的问题item
+            # zhihu_id = scrapy.Field ()--------------
+            # topics = scrapy.Field ()--------------
+            # url = scrapy.Field ()------------
+            # title = scrapy.Field ()------------
+            # content = scrapy.Field ()---------
+            # # 下边两个通过question页面直接获取不到，所以这里不要
+            # # create_time=scrapy.Field()
+            # # update_time=scrapy.Field()
+            # answer_num = scrapy.Field ()---------
+            # comments_num = scrapy.Field ()--------------
+            # watch_user_num = scrapy.Field ()--------------
+            # click_num = scrapy.Field ()----------
+            # crawl_time = scrapy.Field ()
+            # crawl_update_time = scrapy.Field ()
+
+            # text1=response.css(".QuestionHeader-title::text").extract_first()
+            # print(text1)
+            pass
+        else:
+            print("旧版本")
+
 
 
     def start_requests(self):
