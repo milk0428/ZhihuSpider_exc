@@ -62,11 +62,13 @@ class ZhihuSpider(scrapy.Spider):
             item_loader.add_css("content",".QuestionHeader-detail")
             item_loader.add_value("url",response.url)
             item_loader.add_value("zhihu_id",question_id)
-            item_loader.add_css("answer_num",".QuestionMainAction::text")#有其他数据，待调整----------
+            item_loader.add_css("answer_num",".List-headerText span::text")#有其他数据，待调整
             item_loader.add_css("comments_num",".QuestionHeader-Comment button::text")#有其他数据，待调整
             item_loader.add_css("watch_user_num",".QuestionFollowStatus-counts .NumberBoard-itemValue::attr(title)")#包含了关注者及被浏览
             item_loader.add_css("click_num",".QuestionFollowStatus-counts .NumberBoard-itemValue::attr(title)")#包含了关注者及被浏览
-            item_loader.add_css("topics",".QuestionHeader-topics .Popover::text")#待完善---------------
+            item_loader.add_css("topics",".QuestionHeader-topics .Popover div::text")#待完善---------------
+            # text1 = response.css ( ".QuestionHeader-topics .Popover div::text" ).extract_first ()
+            # print ( text1 )
 
             question_item=item_loader.load_item()
             # # zhihu的问题item
