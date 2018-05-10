@@ -20,6 +20,7 @@ class ZhihuSpider(scrapy.Spider):
     name = 'zhihu_spider'
     allowed_domains = ['www.zhihu.com']
     start_urls = ['http://www.zhihu.com/']
+    orgin_answer_url="https://www.zhihu.com/api/v4/questions/{0}/answers?sort_by=default&include=data[*].is_normal,admin_closed_comment,reward_info,is_collapsed,annotation_action,annotation_detail,collapse_reason,is_sticky,collapsed_by,suggest_edit,comment_count,can_comment,content,editable_content,voteup_count,reshipment_settings,comment_permission,created_time,updated_time,review_info,relevant_info,question,excerpt,relationship.is_authorized,is_author,voting,is_thanked,is_nothelp;data[*].mark_infos[*].url;data[*].author.follower_count,badge[?(type=best_answerer)].topics&limit={1}&offset={2}"
     header={
         "HOST": "www.zhihu.com",
         "Referer": "https://www.zhizhu.com",
@@ -44,9 +45,13 @@ class ZhihuSpider(scrapy.Spider):
         for url in all_urls:
             mathc_obj=re.match("(.*zhihu.com/question/(\d+))(/|$).*",url)
             if mathc_obj:
+                #如果提取到question相关的页面，则提取链接后交给parse_question()函数处理
                 request_url=mathc_obj.group(1)
-                question_id=mathc_obj.group(2)
+                # question_id=mathc_obj.group(2)    #这里获取的id没有通过meta元素传递出去，而是直接在下一个需要的位置运行正则表达式查找，所以此处先去掉
                 yield scrapy.Request(request_url,headers=self.header,callback=self.parse_question)
+            else:
+                #如果当前url不是合适的链接，那么就进入该url查找看看这个url里有无合适的链接。（深度优先策略）callback可以不写，因为默认也是回调parse()
+                yield scrapy.Request(url,headers=self.header,callback=self.parse)
 
     #处理question页面，从页面中提取具体的question item
     def parse_question(self, response):
@@ -66,34 +71,53 @@ class ZhihuSpider(scrapy.Spider):
             item_loader.add_css("comments_num",".QuestionHeader-Comment button::text")#有其他数据，待调整
             item_loader.add_css("watch_user_num",".QuestionFollowStatus-counts .NumberBoard-itemValue::attr(title)")#包含了关注者及被浏览
             item_loader.add_css("click_num",".QuestionFollowStatus-counts .NumberBoard-itemValue::attr(title)")#包含了关注者及被浏览
-            item_loader.add_css("topics",".QuestionHeader-topics .Popover div::text")#待完善---------------
+            item_loader.add_css("topics",".QuestionHeader-topics .Popover div::text")#待完善
             # text1 = response.css ( ".QuestionHeader-topics .Popover div::text" ).extract_first ()
             # print ( text1 )
-
             question_item=item_loader.load_item()
-            # # zhihu的问题item
-            # zhihu_id = scrapy.Field ()--------------
-            # topics = scrapy.Field ()--------------
-            # url = scrapy.Field ()------------
-            # title = scrapy.Field ()------------
-            # content = scrapy.Field ()---------
-            # # 下边两个通过question页面直接获取不到，所以这里不要
-            # # create_time=scrapy.Field()
-            # # update_time=scrapy.Field()
-            # answer_num = scrapy.Field ()---------
-            # comments_num = scrapy.Field ()--------------
-            # watch_user_num = scrapy.Field ()--------------
-            # click_num = scrapy.Field ()----------
-            # crawl_time = scrapy.Field ()
-            # crawl_update_time = scrapy.Field ()
-
-            # text1=response.css(".QuestionHeader-title::text").extract_first()
-            # print(text1)
-            pass
+            yield scrapy.Request(self.orgin_answer_url.format(question_id,20,0),headers=self.header,callback=self.parse_answer)
+            # yield question_item
         else:
             print("旧版本")
 
+    #提取answer item
+    def parse_answer(self,response):
+        answers=json.loads(response.text)
+        is_end=answers["paging"]["is_end"]
+        next_url=answers["paging"]["next"]
 
+        for answer in answers["data"]:
+            answer_item=ZhihuAnswerItem()
+            answer_item["zhihu_id"]=answer["id"]
+            answer_item["url"] = answer["url"]
+            answer_item["question_id"] = answer["question"]["id"]
+            answer_item["author_id"] = answer["author"]["id"]   #判断有可能无
+            answer_item["content"] = answer["content"]
+            answer_item["praise_num"] = answer["voteup_count"]
+            answer_item["comments_num"] = answer["comment_count"]
+            answer_item["create_time"] = answer["created_time"]
+            answer_item["update_time"] = answer["updated_time"]
+            answer_item["crawl_time"] =time.time()
+            answer_item["crawl_update_time"] =time.time()   #待定
+            yield answer_item
+
+        if not is_end:
+            yield scrapy.Request(next_url,headers=self.header,callback=self.parse_answer)
+
+            # zhihu_id = scrapy.Field ()
+            # url = scrapy.Field ()
+            # question_id = scrapy.Field ()
+            # author_id = scrapy.Field ()
+            # content = scrapy.Field ()
+            # praise_num = scrapy.Field ()
+            # comments_num = scrapy.Field ()
+            # create_num = scrapy.Field ()
+            # update_num = scrapy.Field ()
+            # crawl_time = scrapy.Field ()
+            # crawl_update_time = scrapy.Field ()
+        # print("=====================================")
+        # print(is_end)
+        # print( "=====================================" )
 
     def start_requests(self):
         #注意传入headers
