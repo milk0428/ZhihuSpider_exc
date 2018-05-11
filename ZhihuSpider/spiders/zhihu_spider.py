@@ -5,8 +5,9 @@ import json
 from selenium import webdriver
 import time
 import pickle
+import datetime
 
-from  scrapy.loader import ItemLoader
+from scrapy.loader import ItemLoader
 from ZhihuSpider.items import ZhihuQuestionItem,ZhihuAnswerItem
 
 try:
@@ -58,9 +59,9 @@ class ZhihuSpider(scrapy.Spider):
         #知乎之前有新旧版本之分，有“QusetionHeader-title”的为新版本，无的为旧版本，故以此为判断依据
         if "QuestionHeader-title" in response.text:
             #注意使用itemloader方法先要import此类以及相关的item类
-            mathc_obj = re.match ( "(.*zhihu.com/question/(\d+))(/|$).*" , response.url )
+            mathc_obj = re.match("(.*zhihu.com/question/(\d+))(/|$).*", response.url)
             if mathc_obj:
-                question_id =int(mathc_obj.group(2))
+                question_id = int(mathc_obj.group(2))
 
             item_loader = ItemLoader(item=ZhihuQuestionItem(), response=response)
             item_loader.add_css("title",".QuestionHeader-title::text")
@@ -72,11 +73,11 @@ class ZhihuSpider(scrapy.Spider):
             item_loader.add_css("watch_user_num",".QuestionFollowStatus-counts .NumberBoard-itemValue::attr(title)")#包含了关注者及被浏览
             item_loader.add_css("click_num",".QuestionFollowStatus-counts .NumberBoard-itemValue::attr(title)")#包含了关注者及被浏览
             item_loader.add_css("topics",".QuestionHeader-topics .Popover div::text")#待完善
-            # text1 = response.css ( ".QuestionHeader-topics .Popover div::text" ).extract_first ()
-            # print ( text1 )
             question_item=item_loader.load_item()
             yield scrapy.Request(self.orgin_answer_url.format(question_id,20,0),headers=self.header,callback=self.parse_answer)
-            # yield question_item
+            yield question_item
+
+            #此处可再运行parse()中获取目标页面再请求Request(),为简化逻辑，这里不再运行。
         else:
             print("旧版本")
 
@@ -91,33 +92,19 @@ class ZhihuSpider(scrapy.Spider):
             answer_item["zhihu_id"]=answer["id"]
             answer_item["url"] = answer["url"]
             answer_item["question_id"] = answer["question"]["id"]
-            answer_item["author_id"] = answer["author"]["id"]   #判断有可能无
+            #因可能会是匿名回复，故可能没有作者id，需判断
+            answer_item["author_id"] = answer["author"]["id"] if "id" in answer["author"] else None   #判断有可能无
             answer_item["content"] = answer["content"]
             answer_item["praise_num"] = answer["voteup_count"]
             answer_item["comments_num"] = answer["comment_count"]
             answer_item["create_time"] = answer["created_time"]
             answer_item["update_time"] = answer["updated_time"]
-            answer_item["crawl_time"] =time.time()
-            answer_item["crawl_update_time"] =time.time()   #待定
+            answer_item["crawl_time"] =datetime.datetime.time()
+            # answer_item["crawl_update_time"] =time.time()   #暂时未获取
             yield answer_item
 
         if not is_end:
             yield scrapy.Request(next_url,headers=self.header,callback=self.parse_answer)
-
-            # zhihu_id = scrapy.Field ()
-            # url = scrapy.Field ()
-            # question_id = scrapy.Field ()
-            # author_id = scrapy.Field ()
-            # content = scrapy.Field ()
-            # praise_num = scrapy.Field ()
-            # comments_num = scrapy.Field ()
-            # create_num = scrapy.Field ()
-            # update_num = scrapy.Field ()
-            # crawl_time = scrapy.Field ()
-            # crawl_update_time = scrapy.Field ()
-        # print("=====================================")
-        # print(is_end)
-        # print( "=====================================" )
 
     def start_requests(self):
         #注意传入headers
@@ -125,12 +112,10 @@ class ZhihuSpider(scrapy.Spider):
         browser=webdriver.Firefox(executable_path="D:/PycharmProjects/ZhihuSpider/geckodriver.exe")
         browser.get("https://www.zhihu.com/signin?next=%2F")
 
-        #知乎账号密码
-        #测试版本
-        #测试同步功能
         browser.find_element_by_css_selector(".SignFlow-accountInput input").send_keys("13889931091")
         browser.find_element_by_css_selector(".SignFlow-password input").send_keys("102733Cch")
 
+        #暂停10秒以输入验证码
         time.sleep(10)
 
         browser.find_element_by_css_selector(".SignFlow .SignFlow-submitButton").click()
@@ -145,7 +130,7 @@ class ZhihuSpider(scrapy.Spider):
             f.close()
             #只获取cookie的name/value字段的值并装进字典，将该字典赋值给scrapy的cookies以维持登陆状态。注意该原来的字典中有很多字段。
             cookie_dict[cookie['name']] = cookie['value']
-        # browser.close()
+        browser.close()
         #注意dont_filter参数以及setting.py中设置ROBOTSTXT_OBEY = False
         # 没有写回调函数的话默认调用prase（）
         #注意要传入参数headers
