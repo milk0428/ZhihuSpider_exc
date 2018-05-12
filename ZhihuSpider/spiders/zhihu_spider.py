@@ -63,6 +63,7 @@ class ZhihuSpider(scrapy.Spider):
             if mathc_obj:
                 question_id = int(mathc_obj.group(2))
 
+            #itemloader方式获取的数据为list对象，故需要在item类中再处理
             item_loader = ItemLoader(item=ZhihuQuestionItem(), response=response)
             item_loader.add_css("title",".QuestionHeader-title::text")
             item_loader.add_css("content",".QuestionHeader-detail")
@@ -74,7 +75,7 @@ class ZhihuSpider(scrapy.Spider):
             item_loader.add_css("click_num",".QuestionFollowStatus-counts .NumberBoard-itemValue::attr(title)")#包含了关注者及被浏览
             item_loader.add_css("topics",".QuestionHeader-topics .Popover div::text")#待完善
             question_item=item_loader.load_item()
-            yield scrapy.Request(self.orgin_answer_url.format(question_id,20,0),headers=self.header,callback=self.parse_answer)
+            # yield scrapy.Request(self.orgin_answer_url.format(question_id,20,0),headers=self.header,callback=self.parse_answer)
             yield question_item
 
             #此处可再运行parse()中获取目标页面再请求Request(),为简化逻辑，这里不再运行。

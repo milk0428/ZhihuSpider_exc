@@ -64,9 +64,9 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'ZhihuSpider.pipelines.ZhihuspiderPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'ZhihuSpider.pipelines.MysqlTwistedPipline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,3 +88,13 @@ ROBOTSTXT_OBEY = False
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+#定义数据库数据用于pipelines类中读取
+MYSQL_HOST="127.0.0.1"
+MYSQL_DBNAME="zhihu_spider"
+MYSQL_USER="root"
+MYSQL_PASSWORD="123456"
+
+#自定义存储到mysql里面的日期格式
+SQL_DATETIME_FORMAT="%Y-%m-%d %H:%M:%S"
+SQL_DATE_FORMAT="%Y-%m-%d"
