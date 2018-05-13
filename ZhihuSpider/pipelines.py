@@ -40,7 +40,7 @@ class MysqlTwistedPipline(object):
 
     #执行具体的插入
     def do_insert(self,cursor,item):
-        insert_sql,params = item.get_insert_sql()
+        insert_sql,params = item.get_insert_sql
         cursor.execute(insert_sql,params)
         #不用使用commit()函数，会自动提交
 

@@ -10,6 +10,8 @@ import datetime
 from scrapy.loader import ItemLoader
 from ZhihuSpider.items import ZhihuQuestionItem,ZhihuAnswerItem
 
+from ZhihuSpider.settings import SQL_DATE_FORMAT,SQL_DATETIME_FORMAT
+
 try:
     # python2写法
     import urlprase as prase
@@ -75,7 +77,7 @@ class ZhihuSpider(scrapy.Spider):
             item_loader.add_css("click_num",".QuestionFollowStatus-counts .NumberBoard-itemValue::attr(title)")#包含了关注者及被浏览
             item_loader.add_css("topics",".QuestionHeader-topics .Popover div::text")#待完善
             question_item=item_loader.load_item()
-            # yield scrapy.Request(self.orgin_answer_url.format(question_id,20,0),headers=self.header,callback=self.parse_answer)
+            yield scrapy.Request(self.orgin_answer_url.format(question_id,20,0),headers=self.header,callback=self.parse_answer)
             yield question_item
 
             #此处可再运行parse()中获取目标页面再请求Request(),为简化逻辑，这里不再运行。
@@ -98,9 +100,9 @@ class ZhihuSpider(scrapy.Spider):
             answer_item["content"] = answer["content"]
             answer_item["praise_num"] = answer["voteup_count"]
             answer_item["comments_num"] = answer["comment_count"]
-            answer_item["create_time"] = answer["created_time"]
-            answer_item["update_time"] = answer["updated_time"]
-            answer_item["crawl_time"] =datetime.datetime.time()
+            answer_item["create_time"] =datetime.datetime.fromtimestamp(answer["created_time"]).strftime(SQL_DATETIME_FORMAT)
+            answer_item["update_time"] =datetime.datetime.fromtimestamp(answer["updated_time"]).strftime(SQL_DATETIME_FORMAT)
+            answer_item["crawl_time"] =datetime.datetime.now().strftime(SQL_DATETIME_FORMAT)
             # answer_item["crawl_update_time"] =time.time()   #暂时未获取
             yield answer_item
 
@@ -121,7 +123,7 @@ class ZhihuSpider(scrapy.Spider):
 
         browser.find_element_by_css_selector(".SignFlow .SignFlow-submitButton").click()
         #等待5秒以使得页面读取完毕
-        time.sleep(5)
+        time.sleep(15)
         cookies=browser.get_cookies()
         # print(cookies)
         cookie_dict={}
