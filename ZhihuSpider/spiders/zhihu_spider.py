@@ -6,6 +6,7 @@ from selenium import webdriver
 import time
 import pickle
 import datetime
+import os
 
 from scrapy.loader import ItemLoader
 from ZhihuSpider.items import ZhihuQuestionItem,ZhihuAnswerItem
@@ -71,14 +72,17 @@ class ZhihuSpider(scrapy.Spider):
             item_loader.add_css("content",".QuestionHeader-detail")
             item_loader.add_value("url",response.url)
             item_loader.add_value("zhihu_id",question_id)
-            item_loader.add_css("answer_num",".List-headerText span::text")#有其他数据，待调整
-            item_loader.add_css("comments_num",".QuestionHeader-Comment button::text")#有其他数据，待调整
-            item_loader.add_css("watch_user_num",".QuestionFollowStatus-counts .NumberBoard-itemValue::attr(title)")#包含了关注者及被浏览
-            item_loader.add_css("click_num",".QuestionFollowStatus-counts .NumberBoard-itemValue::attr(title)")#包含了关注者及被浏览
-            item_loader.add_css("topics",".QuestionHeader-topics .Popover div::text")#待完善
+            item_loader.add_css("answer_num",".List-headerText span::text")
+            item_loader.add_css("comments_num",".QuestionHeader-Comment button::text")
+            item_loader.add_css("watch_user_num",".QuestionFollowStatus-counts .NumberBoard-itemValue::attr(title)")#包含了关注者及被浏览，在item中处理
+            item_loader.add_css("click_num",".QuestionFollowStatus-counts .NumberBoard-itemValue::attr(title)")#包含了关注者及被浏览，在item中处理
+            item_loader.add_css("topics",".QuestionHeader-topics .Popover div::text")
             question_item=item_loader.load_item()
-            yield scrapy.Request(self.orgin_answer_url.format(question_id,20,0),headers=self.header,callback=self.parse_answer)
             yield question_item
+
+            #如果无答案则不爬取
+            if "answer_num" in question_item:
+                yield scrapy.Request(self.orgin_answer_url.format(question_id,20,0),headers=self.header,callback=self.parse_answer)
 
             #此处可再运行parse()中获取目标页面再请求Request(),为简化逻辑，这里不再运行。
         else:
@@ -112,11 +116,13 @@ class ZhihuSpider(scrapy.Spider):
     def start_requests(self):
         #注意传入headers
         # return [scrapy.Request("https://www.zhihu.com/#signin",callback=self.login,headers=self.header)]
+        username=input("请输入知乎用户名：")
+        password=input("请输入知乎密码：")
         browser=webdriver.Firefox(executable_path="D:/PycharmProjects/ZhihuSpider/geckodriver.exe")
         browser.get("https://www.zhihu.com/signin?next=%2F")
 
-        browser.find_element_by_css_selector(".SignFlow-accountInput input").send_keys("13889931091")
-        browser.find_element_by_css_selector(".SignFlow-password input").send_keys("102733Cch")
+        browser.find_element_by_css_selector(".SignFlow-accountInput input").send_keys(username)
+        browser.find_element_by_css_selector(".SignFlow-password input").send_keys(password)
 
         #暂停10秒以输入验证码
         time.sleep(10)

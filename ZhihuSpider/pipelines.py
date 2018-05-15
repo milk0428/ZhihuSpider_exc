@@ -8,9 +8,9 @@ from twisted.enterprise import adbapi
 import MySQLdb
 import MySQLdb.cursors
 
-class ZhihuspiderPipeline(object):
-    def process_item(self, item, spider):
-        return item
+# class ZhihuspiderPipeline(object):
+#     def process_item(self, item, spider):
+#         return item
 
 class MysqlTwistedPipline(object):
     def __init__(self,dbpool):

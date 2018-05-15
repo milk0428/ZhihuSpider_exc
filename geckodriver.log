@@ -940,3 +940,258 @@ le z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 34
 1525960903394	Marionette	INFO	Enabled via --marionette
 1525960905296	Marionette	INFO	Listening on port 56434
 1525960905854	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 10172, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 10172, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9888, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9888, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 10172, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11068, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1526135471923	geckodriver	INFO	geckodriver 0.19.1
+1526135471945	geckodriver	INFO	Listening on 127.0.0.1:60101
+1526135474958	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.P9PxmvwXBclp"
+1526135476414	Marionette	INFO	Enabled via --marionette
+1526135479126	Marionette	INFO	Listening on port 60115
+1526135479192	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526137425348	geckodriver	INFO	geckodriver 0.19.1
+1526137425406	geckodriver	INFO	Listening on 127.0.0.1:62630
+1526137428398	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.usEpXOJSAapO"
+1526137430058	Marionette	INFO	Enabled via --marionette
+1526137432408	Marionette	INFO	Listening on port 62642
+1526137432560	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526137576904	geckodriver	INFO	geckodriver 0.19.1
+1526137576916	geckodriver	INFO	Listening on 127.0.0.1:62895
+1526137579982	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.9kCi7D8L8A4k"
+1526137581132	Marionette	INFO	Enabled via --marionette
+1526137583076	Marionette	INFO	Listening on port 62907
+1526137583236	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526137761711	geckodriver	INFO	geckodriver 0.19.1
+1526137761722	geckodriver	INFO	Listening on 127.0.0.1:63192
+1526137764760	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.4gX3my88fa1Y"
+1526137765932	Marionette	INFO	Enabled via --marionette
+1526137768112	Marionette	INFO	Listening on port 63204
+1526137768612	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526138163354	geckodriver	INFO	geckodriver 0.19.1
+1526138163366	geckodriver	INFO	Listening on 127.0.0.1:63751
+1526138166444	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.rUn8vMpNPw6k"
+1526138167384	Marionette	INFO	Enabled via --marionette
+1526138169334	Marionette	INFO	Listening on port 63762
+1526138169690	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526138383016	geckodriver	INFO	geckodriver 0.19.1
+1526138383029	geckodriver	INFO	Listening on 127.0.0.1:64090
+1526138386085	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.brAviOK3IpCw"
+1526138386980	Marionette	INFO	Enabled via --marionette
+1526138388876	Marionette	INFO	Listening on port 64101
+1526138389390	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526138465265	geckodriver	INFO	geckodriver 0.19.1
+1526138465280	geckodriver	INFO	Listening on 127.0.0.1:64284
+1526138468331	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.ZJhfvKUw5zSl"
+1526138469092	Marionette	INFO	Enabled via --marionette
+1526138471162	Marionette	INFO	Listening on port 64296
+1526138471542	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526138523684	geckodriver	INFO	geckodriver 0.19.1
+1526138523696	geckodriver	INFO	Listening on 127.0.0.1:64435
+1526138526760	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.CjqE6A7d58sI"
+1526138527544	Marionette	INFO	Enabled via --marionette
+1526138529522	Marionette	INFO	Listening on port 64447
+1526138530034	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526138617857	geckodriver	INFO	geckodriver 0.19.1
+1526138617878	geckodriver	INFO	Listening on 127.0.0.1:64629
+1526138620924	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.lXLSlUHhm2Ey"
+1526138621700	Marionette	INFO	Enabled via --marionette
+1526138623626	Marionette	INFO	Listening on port 64645
+1526138624132	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526138853214	geckodriver	INFO	geckodriver 0.19.1
+1526138853226	geckodriver	INFO	Listening on 127.0.0.1:65006
+1526138856262	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.aQw4bJSh6dAT"
+1526138857092	Marionette	INFO	Enabled via --marionette
+1526138859384	Marionette	INFO	Listening on port 65017
+1526138859632	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526139053812	geckodriver	INFO	geckodriver 0.19.1
+1526139053824	geckodriver	INFO	Listening on 127.0.0.1:65436
+1526139056882	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.CMPuCxYD6sqG"
+1526139057802	Marionette	INFO	Enabled via --marionette
+1526139059808	Marionette	INFO	Listening on port 65447
+1526139060132	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526139160073	geckodriver	INFO	geckodriver 0.19.1
+1526139160099	geckodriver	INFO	Listening on 127.0.0.1:49274
+1526139163132	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.4Iw64szRC77B"
+1526139163908	Marionette	INFO	Enabled via --marionette
+1526139165864	Marionette	INFO	Listening on port 49286
+1526139166312	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526139239570	geckodriver	INFO	geckodriver 0.19.1
+1526139239582	geckodriver	INFO	Listening on 127.0.0.1:49452
+1526139242651	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.2fJKHg4c2kWj"
+1526139243422	Marionette	INFO	Enabled via --marionette
+1526139245212	Marionette	INFO	Listening on port 49465
+1526139246064	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526139363315	geckodriver	INFO	geckodriver 0.19.1
+1526139363327	geckodriver	INFO	Listening on 127.0.0.1:49676
+1526139366339	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.fKHuCQA9L8gO"
+1526139367160	Marionette	INFO	Enabled via --marionette
+1526139369272	Marionette	INFO	Listening on port 49688
+1526139369718	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526196393921	geckodriver	INFO	geckodriver 0.19.1
+1526196393983	geckodriver	INFO	Listening on 127.0.0.1:50660
+1526196396975	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.pC2VW8V68VDv"
+1526196398266	Marionette	INFO	Enabled via --marionette
+1526196400336	Marionette	INFO	Listening on port 50678
+1526196400748	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526196772027	geckodriver	INFO	geckodriver 0.19.1
+1526196772039	geckodriver	INFO	Listening on 127.0.0.1:51391
+1526196775086	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.AXphrEUof31z"
+1526196775898	Marionette	INFO	Enabled via --marionette
+1526196778572	Marionette	INFO	Listening on port 51403
+1526196778874	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526197249678	geckodriver	INFO	geckodriver 0.19.1
+1526197249690	geckodriver	INFO	Listening on 127.0.0.1:52101
+1526197252761	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.QaPIPfanbY0L"
+1526197253798	Marionette	INFO	Enabled via --marionette
+1526197256266	Marionette	INFO	Listening on port 52114
+1526197256636	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526197517319	geckodriver	INFO	geckodriver 0.19.1
+1526197517330	geckodriver	INFO	Listening on 127.0.0.1:52534
+1526197520377	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.63HWpDwSuS4d"
+1526197521518	Marionette	INFO	Enabled via --marionette
+1526197523648	Marionette	INFO	Listening on port 52545
+1526197524074	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526207819391	geckodriver	INFO	geckodriver 0.19.1
+1526207819415	geckodriver	INFO	Listening on 127.0.0.1:49748
+1526207822469	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.K3O6JaE4WOGk"
+1526207824182	Marionette	INFO	Enabled via --marionette
+[Parent 1140, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6892, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1526207827302	Marionette	INFO	Listening on port 49769
+1526207827848	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526207858762	geckodriver	INFO	geckodriver 0.19.1
+1526207858773	geckodriver	INFO	Listening on 127.0.0.1:49900
+1526207861814	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.LnS7QWXwPVn6"
+1526207862562	Marionette	INFO	Enabled via --marionette
+1526207864612	Marionette	INFO	Listening on port 49915
+1526207865016	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526207914212	geckodriver	INFO	geckodriver 0.19.1
+1526207914222	geckodriver	INFO	Listening on 127.0.0.1:50048
+1526207917306	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.Gm1wjUMpOheF"
+1526207918118	Marionette	INFO	Enabled via --marionette
+1526207920088	Marionette	INFO	Listening on port 50060
+1526207920572	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 4520, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1526208045679	geckodriver	INFO	geckodriver 0.19.1
+1526208045690	geckodriver	INFO	Listening on 127.0.0.1:50337
+1526208048749	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.pOaVMONqWw9h"
+1526208049504	Marionette	INFO	Enabled via --marionette
+1526208051842	Marionette	INFO	Listening on port 50349
+1526208052086	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526208147920	geckodriver	INFO	geckodriver 0.19.1
+1526208147932	geckodriver	INFO	Listening on 127.0.0.1:50562
+1526208150992	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.IQzcVjVPx5vt"
+1526208151776	Marionette	INFO	Enabled via --marionette
+1526208153600	Marionette	INFO	Listening on port 50573
+1526208154244	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526208392634	geckodriver	INFO	geckodriver 0.19.1
+1526208392644	geckodriver	INFO	Listening on 127.0.0.1:50948
+1526208395727	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.ggYpFhYLRlo2"
+1526208396488	Marionette	INFO	Enabled via --marionette
+1526208398486	Marionette	INFO	Listening on port 50959
+1526208398964	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526208462398	geckodriver	INFO	geckodriver 0.19.1
+1526208462408	geckodriver	INFO	Listening on 127.0.0.1:51118
+1526208465463	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.vdg4ZrAieapS"
+1526208466194	Marionette	INFO	Enabled via --marionette
+1526208468132	Marionette	INFO	Listening on port 51129
+1526208468690	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526208722935	geckodriver	INFO	geckodriver 0.19.1
+1526208722946	geckodriver	INFO	Listening on 127.0.0.1:51599
+1526208726024	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.WvjhFfYxNP37"
+1526208726778	Marionette	INFO	Enabled via --marionette
+1526208729230	Marionette	INFO	Listening on port 51611
+1526208729270	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526208792154	geckodriver	INFO	geckodriver 0.19.1
+1526208792166	geckodriver	INFO	Listening on 127.0.0.1:51767
+1526208795244	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.WIwCCxG7dPIt"
+1526208796010	Marionette	INFO	Enabled via --marionette
+1526208798196	Marionette	INFO	Listening on port 51778
+1526208798516	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 6444, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4368, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4368, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1160, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1160, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1526208832502	geckodriver	INFO	geckodriver 0.19.1
+1526208832512	geckodriver	INFO	Listening on 127.0.0.1:51872
+1526208835584	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.Zmv8dll7OCD0"
+1526208836414	Marionette	INFO	Enabled via --marionette
+1526208838104	Marionette	INFO	Listening on port 51884
+1526208838832	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526208936994	geckodriver	INFO	geckodriver 0.19.1
+1526208937005	geckodriver	INFO	Listening on 127.0.0.1:52088
+1526208940063	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.N1WBlxxZcLnn"
+1526208940824	Marionette	INFO	Enabled via --marionette
+1526208942976	Marionette	INFO	Listening on port 52099
+1526208943296	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526209004619	geckodriver	INFO	geckodriver 0.19.1
+1526209004632	geckodriver	INFO	Listening on 127.0.0.1:52258
+1526209007672	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.ngs8OtwBLmJi"
+1526209008464	Marionette	INFO	Enabled via --marionette
+1526209010912	Marionette	INFO	Listening on port 52274
+1526209011412	Marionette	WARN	TLS certificate errors wi1526209011698	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.1GFLcnh325ty"
+1526209012572	Marionette	INFO	Enabled via --marionette
+1526209017452	Marionette	INFO	Listening on port 52312
+1526209017784	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526209210860	geckodriver	INFO	geckodriver 0.19.1
+1526209210872	geckodriver	INFO	Listening on 127.0.0.1:52711
+1526209213942	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.qc0FuvJiWTLy"
+1526209215144	Marionette	INFO	Enabled via --marionette
+1526209217220	Marionette	INFO	Listening on port 52722
+1526209217252	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526209545807	geckodriver	INFO	geckodriver 0.19.1
+1526209545819	geckodriver	INFO	Listening on 127.0.0.1:53302
+1526209548881	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.nzPc1PnUVmEB"
+1526209549656	Marionette	INFO	Enabled via --marionette
+1526209552364	Marionette	INFO	Listening on port 53315
+1526209552652	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526209994169	geckodriver	INFO	geckodriver 0.19.1
+1526209994181	geckodriver	INFO	Listening on 127.0.0.1:53947
+1526209997253	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.kc4hwiuFVaNJ"
+1526209998158	Marionette	INFO	Enabled via --marionette
+1526210003710	Marionette	INFO	Listening on port 53959
+1526210004360	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526210121004	geckodriver	INFO	geckodriver 0.19.1
+1526210121016	geckodriver	INFO	Listening on 127.0.0.1:54194
+1526210124044	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.6GtLkQJ1auIY"
+1526210125200	Marionette	INFO	Enabled via --marionette
+1526210127508	Marionette	INFO	Listening on port 54205
+1526210127892	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526210353826	geckodriver	INFO	geckodriver 0.19.1
+1526210353837	geckodriver	INFO	Listening on 127.0.0.1:54564
+1526210356892	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.qG5mQilrbxna"
+1526210358064	Marionette	INFO	Enabled via --marionette
+1526210360054	Marionette	INFO	Listening on port 54575
+1526210360098	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526210456815	geckodriver	INFO	geckodriver 0.19.1
+1526210456826	geckodriver	INFO	Listening on 127.0.0.1:54779
+1526210459885	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.skOuPwhkTagQ"
+1526210460986	Marionette	INFO	Enabled via --marionette
+1526210462892	Marionette	INFO	Listening on port 54791
+1526210463198	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526211539318	geckodriver	INFO	geckodriver 0.19.1
+1526211539368	geckodriver	INFO	Listening on 127.0.0.1:56439
+1526211542330	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.q5RVeVnnFUm8"
+1526211543412	Marionette	INFO	Enabled via --marionette
+1526211546100	Marionette	INFO	Listening on port 56450
+1526211546576	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526395315378	geckodriver	INFO	geckodriver 0.19.1
+1526395315424	geckodriver	INFO	Listening on 127.0.0.1:55189
+1526395318441	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.onHanybgmTfI"
+1526395320192	Marionette	INFO	Enabled via --marionette
+1526395323146	Marionette	INFO	Listening on port 55204
+1526395323798	Marionette	WARN	TLS certificate errors will be ignored for this session
+1526395805711	geckodriver	INFO	geckodriver 0.19.1
+1526395805722	geckodriver	INFO	Listening on 127.0.0.1:55897
+1526395808791	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.W7zIan5E4RSJ"
+1526395809944	Marionette	INFO	Enabled via --marionette
+1526395813122	Marionette	INFO	Listening on port 55910
+1526395814064	Marionette	WARN	TLS certificate errors will be ignored for this session

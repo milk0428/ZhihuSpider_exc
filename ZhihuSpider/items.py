@@ -8,12 +8,7 @@
 import scrapy
 import datetime
 from  ZhihuSpider.util.common import extract_num
-from ZhihuSpider.settings import SQL_DATE_FORMAT,SQL_DATETIME_FORMAT
-
-class ZhihuspiderItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+from ZhihuSpider.settings import SQL_DATETIME_FORMAT
 
 class ZhihuQuestionItem(scrapy.Item):
     #zhihu的问题item
@@ -23,15 +18,13 @@ class ZhihuQuestionItem(scrapy.Item):
     url=scrapy.Field()
     title=scrapy.Field()
     content=scrapy.Field()
-    #下边两个通过question页面直接获取不到，所以这里不要
-    #create_time=scrapy.Field()
-    #update_time=scrapy.Field()
     answer_num=scrapy.Field()
     comments_num=scrapy.Field()
     watch_user_num=scrapy.Field()
     click_num=scrapy.Field()
     crawl_time=scrapy.Field()
 
+    # 为使得pipelines中数据库插入模块通用多个item的插入操作，故在每一个item中定义插入模块，返回插入语句及插入数据元组
     @property
     def get_insert_sql(self):
         insert_sql="""
@@ -54,6 +47,7 @@ class ZhihuQuestionItem(scrapy.Item):
         #注意在settings中设置mysql格式，在此导入
         crawl_time=datetime.datetime.now().strftime(SQL_DATETIME_FORMAT)
 
+        #注意数据类型为元组
         params=(zhihu_id,topics,url,title,content,answer_num,comments_num,watch_user_num,click_num,crawl_time)
         return insert_sql,params
 
@@ -69,6 +63,7 @@ class ZhihuAnswerItem(scrapy.Item):
     update_time=scrapy.Field()
     crawl_time=scrapy.Field()
 
+    #为使得pipelines中数据库插入模块通用多个item的插入操作，故在每一个item中定义插入模块，返回插入语句及插入数据元组
     @property
     def get_insert_sql(self):
         insert_sql="""
@@ -88,6 +83,6 @@ class ZhihuAnswerItem(scrapy.Item):
         create_time=self["create_time"]
         update_time=self["update_time"]
         crawl_time=self["crawl_time"]
-
+        #注意要是元组
         params=(zhihu_id,url,question_id,author_id,content,praise_num,comments_num,create_time,update_time,crawl_time)
         return insert_sql,params
