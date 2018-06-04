@@ -14,6 +14,13 @@ BOT_NAME = 'ZhihuSpider'
 SPIDER_MODULES = ['ZhihuSpider.spiders']
 NEWSPIDER_MODULE = 'ZhihuSpider.spiders'
 
+#采用fake_useragent动态更换user_agent，此处为配置动态更换类型，还可以设置成ie、firefox等等
+RANDOM_UA_TYPE="random"
+# USER_AGENT_LIST=[
+#    "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.9.3.1000 Chrome/39.0.2146.0 Safari/537.36",
+#    "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36",
+#    "Mozilla/5.0 (Windows NT 6.1; W…) Gecko/20100101 Firefox/60.0"
+#    ]
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'ZhihuSpider (+http://www.yourdomain.com)'
@@ -52,9 +59,11 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'ZhihuSpider.middlewares.MyCustomDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   'ZhihuSpider.middlewares.RandomUserAgentMiddlware': 543,
+   #一定要配置UserAgentMiddleware类为None,否则RandomUserAgentMiddlware会被覆盖
+   'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware':None,
+}
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html

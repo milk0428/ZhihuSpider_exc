@@ -6,7 +6,7 @@
 # http://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-
+from fake_useragent import UserAgent
 
 class ZhihuspiderSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -54,3 +54,26 @@ class ZhihuspiderSpiderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+
+class RandomUserAgentMiddlware(object):
+    #随机更换user-agent
+    def __init__(self,crawler):
+        super(RandomUserAgentMiddlware, self).__init__()
+        # self.user_agent_list=crawler.settings.get("USER_AGENT_LIST",[])
+        self.ua=UserAgent()
+        #读取settings.py中配置的随机类型，默认值为random
+        self.ua_type=crawler.settings.get("RANDOM_UA_TYPE","random")
+
+    @classmethod
+    def from_crawler(cls,crawler):
+        return cls(crawler)
+
+    #重写此方法是固定的
+    def process_request(self,request,spider):
+        #在函数中定义函数是动态语言的特点，非动态语言不能这样做
+        #注意getattr()函数的用法。因为fake_useragent用法为ua.random
+        def get_ua():
+            return getattr(self.ua,self.ua_type)
+        user_agent= "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.104 Safari/537.36"
+        #因知乎会校验user-agent版本，太旧的话会返回错误提示页面导致爬取失败，故此处还是采用固定的user-agent，若使用动态agent，只需将下列函数中的user_agent参数换成get_ua()
+        request.headers.setdefault("User-Agent",user_agent)

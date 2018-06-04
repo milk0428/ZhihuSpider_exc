@@ -6,12 +6,12 @@ from selenium import webdriver
 import time
 import pickle
 import datetime
-import os
+import random
 
 from scrapy.loader import ItemLoader
 from ZhihuSpider.items import ZhihuQuestionItem,ZhihuAnswerItem
 
-from ZhihuSpider.settings import SQL_DATE_FORMAT,SQL_DATETIME_FORMAT
+from ZhihuSpider.settings import SQL_DATETIME_FORMAT
 
 try:
     # python2写法
@@ -25,11 +25,12 @@ class ZhihuSpider(scrapy.Spider):
     allowed_domains = ['www.zhihu.com']
     start_urls = ['http://www.zhihu.com/']
     orgin_answer_url="https://www.zhihu.com/api/v4/questions/{0}/answers?sort_by=default&include=data[*].is_normal,admin_closed_comment,reward_info,is_collapsed,annotation_action,annotation_detail,collapse_reason,is_sticky,collapsed_by,suggest_edit,comment_count,can_comment,content,editable_content,voteup_count,reshipment_settings,comment_permission,created_time,updated_time,review_info,relevant_info,question,excerpt,relationship.is_authorized,is_author,voting,is_thanked,is_nothelp;data[*].mark_infos[*].url;data[*].author.follower_count,badge[?(type=best_answerer)].topics&limit={1}&offset={2}"
-    header={
-        "HOST": "www.zhihu.com",
-        "Referer": "https://www.zhizhu.com",
-        'User-Agent': "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.104 Safari/537.36"
-    }
+
+    # header={
+    #     "HOST": "www.zhihu.com",
+    #     "Referer": "https://www.zhizhu.com",
+    #     'User-Agent': "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.104 Safari/537.36"
+    # }
 
     def parse(self, response):
         """
@@ -52,10 +53,10 @@ class ZhihuSpider(scrapy.Spider):
                 #如果提取到question相关的页面，则提取链接后交给parse_question()函数处理
                 request_url=mathc_obj.group(1)
                 # question_id=mathc_obj.group(2)    #这里获取的id没有通过meta元素传递出去，而是直接在下一个需要的位置运行正则表达式查找，所以此处先去掉
-                yield scrapy.Request(request_url,headers=self.header,callback=self.parse_question)
+                yield scrapy.Request(request_url,callback=self.parse_question)
             else:
                 #如果当前url不是合适的链接，那么就进入该url查找看看这个url里有无合适的链接。（深度优先策略）callback可以不写，因为默认也是回调parse()
-                yield scrapy.Request(url,headers=self.header,callback=self.parse)
+                yield scrapy.Request(url,callback=self.parse)
 
     #处理question页面，从页面中提取具体的question item
     def parse_question(self, response):
@@ -82,7 +83,7 @@ class ZhihuSpider(scrapy.Spider):
 
             #如果无答案则不爬取
             if "answer_num" in question_item:
-                yield scrapy.Request(self.orgin_answer_url.format(question_id,20,0),headers=self.header,callback=self.parse_answer)
+                yield scrapy.Request(self.orgin_answer_url.format(question_id,20,0),callback=self.parse_answer)
 
             #此处可再运行parse()中获取目标页面再请求Request(),为简化逻辑，这里不再运行。
         else:
@@ -111,7 +112,7 @@ class ZhihuSpider(scrapy.Spider):
             yield answer_item
 
         if not is_end:
-            yield scrapy.Request(next_url,headers=self.header,callback=self.parse_answer)
+            yield scrapy.Request(next_url,callback=self.parse_answer)
 
     def start_requests(self):
         #注意传入headers
@@ -146,4 +147,4 @@ class ZhihuSpider(scrapy.Spider):
         # return [scrapy.Request(url=self.start_urls[0], dont_filter=True, cookies=cookie_dict,headers=self.header)]
         for url in self.start_urls:
             # 不写回调函数即提交至parse()
-            yield scrapy.Request(url, dont_filter=True, cookies=cookie_dict,headers=self.header)
+            yield scrapy.Request(url, dont_filter=True, cookies=cookie_dict)
